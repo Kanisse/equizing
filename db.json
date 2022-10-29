@@ -1,0 +1,22 @@
+{
+  "Quiz": [
+    {
+      "id": 2,
+      "Nom": "DeepLearning",
+      "Code": "RT4512",
+      "Etat": true
+    },
+    {
+      "Nom": "AI",
+      "Code": "45RTFFF",
+      "Etat": false,
+      "id": 3
+    },
+    {
+      "Nom": "Bigdata",
+      "Code": "34REDF",
+      "Etat": true,
+      "id": 4
+    }
+  ]
+}

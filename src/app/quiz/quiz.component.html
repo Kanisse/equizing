@@ -1,0 +1,64 @@
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col col-md-6 mx-auto">
+      <div class="form-group">
+        <label for="">Nom</label>
+        <input [(ngModel)]="MonQuiz.Nom" type="text" class="form-control"  aria-describedby="helpId">
+        
+        <label for="">Code</label>
+        <input [(ngModel)]="MonQuiz.Code" type="text" class="form-control"  aria-describedby="helpId">
+       
+        <label for="">Etat</label>
+        <input [(ngModel)]="MonQuiz.Etat" type="checkbox" >
+      
+        <button (click)="AddQuiz()" class="btn btn-success btn-block">
+          Ajouter le quiz
+        </button>
+        {{ MonQuiz|json }}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <col class="col-md-6 mx-auto">
+
+    <h3>Liste des Quiz</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Code</th>
+          <th>Etat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let quiz of quizs">
+          <td >{{ quiz.Nom }}</td>
+          <td>{{ quiz.Code }}</td>
+          <td>{{ quiz.Etat }}</td>
+          <td>
+            <button (click)="deleteQuiz(quiz.id)" class="btn btn-danger">
+              <i class="fa fa-trash">
+
+              </i>
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-warning">
+              <i class="fa fa-pencil">
+
+              </i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
